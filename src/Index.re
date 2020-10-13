@@ -7,27 +7,13 @@
 // time through the examples later.
 let style = document##createElement("style");
 document##head##appendChild(style);
-style##innerHTML #= ExampleStyles.style;
+style##innerHTML #= Styles.style;
 
-let makeContainer = text => {
+let makeContainer = () => {
   let container = document##createElement("div");
-  container##className #= "container";
-
-  let title = document##createElement("div");
-  title##className #= "containerTitle";
-  title##innerText #= text;
-
-  let content = document##createElement("div");
-  content##className #= "containerContent";
-
-  let () = container##appendChild(title);
-  let () = container##appendChild(content);
   let () = document##body##appendChild(container);
 
-  content;
+  container;
 };
 
-ReactDOMRe.render(
-  <HelloWorld />,
-  makeContainer("My first reason-react component, lol"),
-);
+ReactDOMRe.render(<HelloWorld />, makeContainer());

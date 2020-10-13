@@ -17,6 +17,10 @@ function HelloWorld(Props) {
       });
   var setCount = match[1];
   var count = match[0];
+  React.useEffect((function () {
+          console.log("Hellow world!");
+          
+        }), []);
   var match$1 = React.useState(function () {
         return 0;
       });

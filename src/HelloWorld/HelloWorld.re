@@ -5,6 +5,11 @@ let marginRight = ReactDOMRe.Style.make(~marginRight="8px", ());
 let make = () => {
   let (count, setCount) = React.useState(() => 0);
 
+  React.useEffect0(() => {
+    Js.Console.log("Hellow world!");
+    None;
+  });
+
   let (timer, setTimer) = React.useState(() => 0);
   React.useEffect0(() => {
     let id =

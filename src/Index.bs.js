@@ -11,14 +11,14 @@ document.head.appendChild(style);
 
 style.innerHTML = Styles$MyReasonReactApp.style;
 
-function makeContainer(param) {
+function appRoot(param) {
   var container = document.createElement("div");
   document.body.appendChild(container);
   return container;
 }
 
-ReactDom.render(React.createElement(HelloWorld$MyReasonReactApp.make, {}), makeContainer(undefined));
+ReactDom.render(React.createElement(HelloWorld$MyReasonReactApp.make, {}), appRoot(undefined));
 
 exports.style = style;
-exports.makeContainer = makeContainer;
+exports.appRoot = appRoot;
 /* style Not a pure module */

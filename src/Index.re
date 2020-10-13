@@ -9,11 +9,11 @@ let style = document##createElement("style");
 document##head##appendChild(style);
 style##innerHTML #= Styles.style;
 
-let makeContainer = () => {
+let appRoot = () => {
   let container = document##createElement("div");
   let () = document##body##appendChild(container);
 
   container;
 };
 
-ReactDOMRe.render(<HelloWorld />, makeContainer());
+ReactDOMRe.render(<HelloWorld />, appRoot());
